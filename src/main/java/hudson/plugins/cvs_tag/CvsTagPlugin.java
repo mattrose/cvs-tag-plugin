@@ -87,7 +87,7 @@ public class CvsTagPlugin {
 
         if (state != null) {
             try {
-                new CvsTagActionWorker(state, tagName, true, build, new CvsTagAction(build, scm), moveTag).perform(listener);
+                new CvsTagActionWorker(state, tagName, false, build, new CvsTagAction(build, scm), moveTag).perform(listener);
             } catch (CommandException e) {
                 e.printStackTrace(listener.error(e.getMessage()));
                 return false;
